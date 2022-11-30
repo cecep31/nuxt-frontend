@@ -1,4 +1,5 @@
 <template>
+    <HeaderNavbar></HeaderNavbar>
     <div>hello</div>
     <div>{{ time }}</div>
     <button @click="increment">add</button>
@@ -10,7 +11,5 @@ function increment() {
     time.value++
 }
 
-definePageMeta({
-    layout: "logged",
-});
+
 </script>

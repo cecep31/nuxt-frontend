@@ -140,7 +140,7 @@
                             <div
                                 class="relative p-1 flex items-center justify-end w-1/4 ml-5 mr-4 sm:mr-0 sm:right-auto">
                                 <a href="#" class="block relative">
-                                    <Image alt="profil" width={50} height={50} priority
+                                    <img alt="profil" width={50} height={50} priority
                                         src="https://placeimg.com/640/480/any"
                                         class="mx-auto object-cover rounded-full h-10 w-10" />
                                 </a>

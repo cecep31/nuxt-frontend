@@ -40,6 +40,7 @@
 <script setup>
 import axios from 'axios'
 
+
 const router = useRouter();
 const username = ref("");
 const password = ref("");
@@ -58,11 +59,15 @@ async function loginnya() {
         },
         data: data,
     };
-   
+
     try {
         const response = await axios(config);
-        alert(response.data.data)
-        router.replace({path:"/dashboard"});
+        // document.cookie = "token="+response.data.data;
+        const {
+            overwrite
+        } = await useSession()
+        await overwrite({ "token": response.data.data })
+        router.replace({ path: "/dashboard" });
     } catch (error) {
         console.log(error);
         alert("Username or password is wrong");
